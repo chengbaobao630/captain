@@ -47,6 +47,24 @@ public class CastUtil {
         return castInt(obj,0);
     }
 
+
+    public static long castLong(Object obj) {
+        return castLong(obj,0l);
+    }
+
+    public static long castLong(Object obj, long defaultValue) {
+        long longValue = defaultValue;
+        if (obj != null ) {
+            String strValue = castString(obj);
+            try{
+                longValue = Long.parseLong(strValue);
+            }catch (NumberFormatException e){
+                longValue = defaultValue;
+            }
+        }
+        return longValue;
+    }
+
     private static int castInt(Object obj, int defaultValue) {
         int intValue = defaultValue;
         if (obj != null ) {

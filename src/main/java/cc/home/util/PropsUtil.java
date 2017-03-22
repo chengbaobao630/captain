@@ -13,7 +13,7 @@ import java.util.Properties;
  */
 public class PropsUtil {
 
-    private static final Logger LOGGER= LoggerFactory.getLogger(PropsUtil.class);
+    public static final Logger LOGGER= LoggerFactory.getLogger(PropsUtil.class);
 
     public static Properties loadProps(String fileName) {
         Properties props = null;
@@ -43,7 +43,7 @@ public class PropsUtil {
         return getString(props,key,"");
     }
 
-    private static String getString(Properties props, String key, String defaultValue) {
+    public static String getString(Properties props, String key, String defaultValue) {
         String value=defaultValue;
         if (props.containsKey(key)){
             value = props.getProperty(key);
@@ -55,7 +55,7 @@ public class PropsUtil {
         return getInt(props,key,0);
     }
 
-    private static int getInt(Properties props, String key, int defaultValue) {
+    public static int getInt(Properties props, String key, int defaultValue) {
         int value=defaultValue;
         if (props.containsKey(key)){
             value =CastUtil.castInt(props.getProperty(key));
@@ -67,7 +67,7 @@ public class PropsUtil {
         return getInt(props,key,false);
     }
 
-    private static boolean getInt(Properties props, String key, boolean defaultValue) {
+    public static boolean getInt(Properties props, String key, boolean defaultValue) {
         boolean value=defaultValue;
         if (props.containsKey(key)){
             value =CastUtil.castBoolean(props.getProperty(key));
