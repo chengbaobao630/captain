@@ -98,7 +98,7 @@ public class DispatcherServlet extends HttpServlet {
                         req.getRequestDispatcher(ConfigHelper.getAppJspPath()+ path).forward(req,resp);
                     }
                 }
-            }else if (result instanceof Date){
+            }else if (result instanceof Data){
                 Data data = (Data) result;
                 Object model = data.getModel();
                 if (model != null ){

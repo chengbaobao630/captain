@@ -30,7 +30,7 @@ public class ReflectionUtil {
         Object result;
         try {
             method.setAccessible(true);
-            result = method.invoke(args);
+            result = method.invoke(obj,args);
         } catch (IllegalAccessException | InvocationTargetException e) {
             LOGGER.error("invoke method due error", e);
             throw new RuntimeException(e);
