@@ -1,5 +1,7 @@
 package cc.home.util;
 
+import org.apache.commons.lang3.StringUtils;
+
 /**
  * Created by root on 17-3-22.
  */
@@ -41,4 +43,21 @@ public class CastUtil {
         return doubleValue;
     }
 
+    public static int castInt(Object obj) {
+        return castInt(obj,0);
+    }
+
+    private static int castInt(Object obj, int defaultValue) {
+        int intValue = defaultValue;
+        if (obj != null ) {
+            String strValue = castString(obj);
+            try{
+                intValue = Integer.parseInt(strValue);
+            }catch (NumberFormatException e){
+                intValue = defaultValue;
+            }
+        }
+        return intValue;
+
+    }
 }
