@@ -51,7 +51,7 @@ public class DispatcherServlet extends HttpServlet {
 
         String requestPath = req.getPathInfo();
 
-        Handler handler = ControllerHelper.getHandler(requestMethod, requestPath);
+        Handler handler = ControllerHelper.getHandler(requestMethod, requestPath.replace("/",""));
 
         if (handler != null) {
             Class<?> cls = handler.getControllerClass();
