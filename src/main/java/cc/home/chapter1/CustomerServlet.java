@@ -28,7 +28,7 @@ public class CustomerServlet extends HttpServlet{
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Customer> customerList = customerService.getCustomerList();
         req.setAttribute("customerList",customerList);
-        req.getRequestDispatcher("/WEB-INF/view/customer.jsp").forward(req,resp);
+        req.getRequestDispatcher("/WEB-INF/view/customer.html").forward(req,resp);
     }
 
     @Override
