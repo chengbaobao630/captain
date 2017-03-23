@@ -21,9 +21,9 @@ public final class AopHelper {
         try{
             Map<Class<?>,Set<Class<?>>> proxyMap = createProxyMap();
             Map<Class<?>,List<Proxy>> targetMap = createTargetMap(proxyMap);
-            for (Map.Entry<Class<?>, List<Proxy>> targetEntery : targetMap.entrySet()) {
-                Class<?> targetClass = targetEntery.getKey();
-                List<Proxy> proxyList= targetEntery.getValue();
+            for (Map.Entry<Class<?>, List<Proxy>> targetEntry : targetMap.entrySet()) {
+                Class<?> targetClass = targetEntry.getKey();
+                List<Proxy> proxyList= targetEntry.getValue();
                 Object proxy = ProxyManager.createProxy(targetClass,proxyList);
                 BeanHelper.setBean(targetClass,proxy);
             }

@@ -44,13 +44,9 @@ public abstract class AspectProxy implements Proxy {
         return true;
     }
 
-    protected abstract void end();
-
-    protected abstract void error(Class<?> cls, Method method, Object params, Exception e);
-
-    protected abstract void after(Class<?> cls, Method method, Object params);
-
-    protected abstract void before(Class<?> cls, Method method, Object params);
-
-    protected abstract void begin();
+    protected  void end(){}
+    protected  void error(Class<?> cls, Method method, Object params, Exception e){}
+    protected  void after(Class<?> cls, Method method, Object params){}
+    protected  void before(Class<?> cls, Method method, Object params){}
+    protected  void begin(){}
 }
