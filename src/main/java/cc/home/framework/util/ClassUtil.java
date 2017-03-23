@@ -58,7 +58,7 @@ public final class ClassUtil {
                                 while (jarEntries.hasMoreElements()) {
                                     JarEntry jarEntry = jarEntries.nextElement();
                                     String jarEntryName = jarEntry.getName();
-                                    if (".class".equals(jarEntryName)) {
+                                    if (jarEntryName.endsWith(".class")) {
                                         String className = jarEntryName.substring(0, jarEntryName.lastIndexOf(".")).replace("/", ".");
                                         doAddClass(classSet, className);
                                     }

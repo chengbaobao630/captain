@@ -2,6 +2,7 @@ package cc.home.chapter1.service;
 
 import cc.home.chapter1.domain.Customer;
 import cc.home.chapter1.helper.DatabaseHelper;
+import cc.home.framework.annotation.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,6 +11,7 @@ import java.util.List;
 /**
  * Created by cheng on 2017/3/22 0022.
  */
+@Service
 public class CustomerService {
 
     private static final Logger LOGGER= LoggerFactory.getLogger(CustomerService.class);

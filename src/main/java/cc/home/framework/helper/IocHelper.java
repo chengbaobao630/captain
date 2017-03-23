@@ -27,7 +27,7 @@ public class IocHelper {
                             Class<?> beanFieldClass = beanFiled.getType();
                             Object beanFieldInstance = beanMap.get(beanFieldClass);
                             if (beanFieldInstance != null){
-                                ReflectionUtil.setField(beanInstance,beanFiled,beanInstance);
+                                ReflectionUtil.setField(beanInstance,beanFiled,beanFieldInstance);
                             }
                         }
                     }
