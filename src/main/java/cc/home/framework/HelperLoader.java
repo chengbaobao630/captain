@@ -1,9 +1,6 @@
 package cc.home.framework;
 
-import cc.home.framework.helper.BeanHelper;
-import cc.home.framework.helper.ClassHelper;
-import cc.home.framework.helper.ControllerHelper;
-import cc.home.framework.helper.IocHelper;
+import cc.home.framework.helper.*;
 import cc.home.framework.util.ClassUtil;
 
 /**
@@ -15,6 +12,7 @@ public final class HelperLoader {
         Class<?>[] classList = {
                 ClassHelper.class,
                 BeanHelper.class,
+                AopHelper.class,
                 IocHelper.class,
                 ControllerHelper.class
         };

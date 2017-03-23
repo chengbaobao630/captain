@@ -19,11 +19,21 @@ public class Param {
         return CastUtil.castLong(paramMap.get(name));
     }
 
-    public Map<String ,Object> getMap(){
+    public Map<String, Object> getMap() {
         return paramMap;
     }
 
+    public String getString(String name) {
+        return CastUtil.castString(paramMap.get(name));
+    }
 
+    public int getInt(String name) {
+        return CastUtil.castInt(paramMap.get(name));
+    }
+
+    public boolean getBoolean(String name) {
+        return CastUtil.castBoolean(paramMap.get(name));
+    }
 
 
 }
